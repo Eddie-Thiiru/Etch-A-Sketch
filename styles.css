@@ -12,9 +12,8 @@ body {
     grid-template-columns: repeat( auto-fill , 40px );    
 }
 
-.columns{
+.squares{
     background-color: skyblue;
     border: 1px solid black;
     box-sizing: border-box;
 }
-
