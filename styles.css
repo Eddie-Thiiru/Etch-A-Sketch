@@ -2,7 +2,19 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    
+}
+
+#amountButton {
+    display: flex;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: coral;
+    padding: 4PX 8PX;
+    margin-bottom: 10PX;
 }
 
 #container {
@@ -12,7 +24,7 @@ body {
     grid-template-columns: repeat( auto-fill , 40px );    
 }
 
-.squares{
+.square{
     background-color: skyblue;
     border: 1px solid black;
     box-sizing: border-box;
