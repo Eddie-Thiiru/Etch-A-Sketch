@@ -1,5 +1,6 @@
 const container = document.querySelector("#container");
 const button = document.querySelector("#amountButton");
+const clientWidth = document.getElementById("container").clientWidth;
 
 const grid = document.createElement("div");
 grid.classList.add("square");
@@ -10,25 +11,32 @@ for(let i = 0; i < 256; i++) {
 }
 container.appendChild(fragment);
 
-function getNumber () {
-    const answer = parseInt(prompt("Input the number of squares per side"));
-
+function funcPrompt () {
+    const answer = parseInt(prompt("Enter the number of squares per side"));
+    const defaultAnswer = 16;
     if (answer <= 100) {
-        console.log(answer * answer);
-        return answer * answer;
-    } 
+        return answer;
+    } else {
+        alert("please enter a number below 100")
+        return defaultAnswer;
+    }
 }
 
 function getSquares(e) {
-    const number = getNumber();
-    const list = document.getElementById("container");
+    const answer = funcPrompt();
+    const squareHeight = (clientWidth / answer) + "px";
+    const squareWidth = (clientWidth / answer) + "px";
+    const number = answer * answer;
 
+    const list = document.getElementById("container");
     while (list.hasChildNodes()) {
         list.removeChild(list.firstChild);
     }
 
     const fragment = new DocumentFragment();
     for(let i = 0; i < number; i++) {
+        grid.style.height = squareHeight;
+        grid.style.width = squareWidth;
         fragment.appendChild(grid.cloneNode(true));
     }
     container.appendChild(fragment);
