@@ -1,37 +1,37 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;  
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #title {
-    font-weight: 700;
-    margin-bottom: 10px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 #amountButton {
-    display: flex;
-    font-size: 14px;
-    font-weight: 700;
-    background-color: coral;
-    padding: 4PX 8PX;
-    margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: coral;
+  padding: 4px 8px;
+  margin-bottom: 10px;
+  display: flex;
 }
 
 #container {
-    width: 640px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
+  width: 640px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 
-.square{
-    background-color: skyblue;
-    border: 1px solid black;
-    box-sizing: border-box;
-    height: 40px;
-    width: 40px;
+.square {
+  background-color: skyblue;
+  border: 1px solid black;
+  box-sizing: border-box;
+  height: 40px;
+  width: 40px;
 }
